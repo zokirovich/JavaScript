@@ -13,7 +13,7 @@ const users = {
 		console.log('Siz sahifangizdan chiqib kettingiz!')
 	},
 	speaks: function() {
-
+// this ni keyingi darsda ko`rib chikamiz
 		}
 	}
 
