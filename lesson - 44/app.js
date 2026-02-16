@@ -39,5 +39,3 @@ const roundedNum = Math.round(numToRound);
 console.log(roundedNum) // 5
 
 
-
-
