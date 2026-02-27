@@ -1,0 +1,14 @@
+.button-wrapper {
+	  /* padding: 200px; */
+    display: flex;
+    justify-content: center; /* gorizontal markaz */
+    gap: 10px; /* tugmalar orasidagi masofa */
+}
+
+.headerPlus {
+		margin-top: 200px;
+		font-size: 24px;
+		font-weight: bold;
+		color: #333;
+		text-align: center;
+}
