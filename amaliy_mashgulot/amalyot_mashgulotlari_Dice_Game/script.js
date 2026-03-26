@@ -11,7 +11,7 @@ const diceImg = document.querySelector('.dice')
 	let curentScore = 0
 	let accPlayer = 0
 	let score = [0,0]
-
+	let gameOver = true
 
 btnRoll.addEventListener('click', () => {
 	diceImg.style.display = 'block'
@@ -33,7 +33,7 @@ btnRoll.addEventListener('click', () => {
 })
 
 
-// hodl
+// hodl score
 btnHold.addEventListener('click', () => {
 score[accPlayer] += curentScore
 document.querySelector(`#score--${accPlayer}`).textContent = score[accPlayer]
@@ -43,4 +43,13 @@ curentScore = 0
 			accPlayer = accPlayer === 0 ? 1 : 0 
 			document.querySelector('.player--0').classList.toggle('player--active') // togle bo`lsa oladi yo`a bo`lsa qo`shish uchun ishlatiladi.
 			document.querySelector('.player--1').classList.toggle('player--active')
+
+			if (score[accPlayer] >= 10) {
+				if (gameOver) {
+					gameOver = false
+					document.querySelector(`.player--${accPlayer}`).classList.add('player--winner')
+				}
+			} else {
+				document.querySelector(`#current--${accPlayer}`).textContent = curentScore
+			}
 })
